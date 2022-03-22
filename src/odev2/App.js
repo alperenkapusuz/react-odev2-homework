@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="homepage">
       <div className="homepage__grid">
-        <p className="homepage__p">You have pushed the button this many times times:</p>
+        <p className="homepage__p">You have pushed the button this many times:</p>
         <p className="homepage__p__sayac">{sayac}</p>
         <button
           className="homepage__button"
