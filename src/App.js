@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [sayac, setSayac] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="homepage">
+      <div className="homepage__grid">
+        <p className="homepage__p">You have pushed the button this many times times:</p>
+        <p className="homepage__p__sayac">{sayac}</p>
+        <button
+          className="homepage__button"
+          onClick={() => setSayac(sayac + 1)}
         >
-          Learn React
-        </a>
-      </header>
+          +
+        </button>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
