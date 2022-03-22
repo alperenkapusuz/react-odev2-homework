@@ -3,6 +3,11 @@ import "./App.css";
 
 const App = () => {
   const [sayac, setSayac] = useState(0);
+
+  const onClick = () => {
+    setSayac(sayac + 1);
+  }
+  
   return (
     <div className="homepage">
       <div className="homepage__grid">
@@ -10,7 +15,7 @@ const App = () => {
         <p className="homepage__p__sayac">{sayac}</p>
         <button
           className="homepage__button"
-          onClick={() => setSayac(sayac + 1)}
+          onClick={onClick}
         >
           +
         </button>
